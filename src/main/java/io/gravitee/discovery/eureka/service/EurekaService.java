@@ -25,6 +25,7 @@ import static com.netflix.appinfo.InstanceInfo.PortType.SECURE;
 
 public class EurekaService implements Service {
 
+  private final static String EUREKA_ID_PREFIX = "eureka:";
   private InstanceInfo instance;
 
   public EurekaService(InstanceInfo instance) {
@@ -50,7 +51,7 @@ public class EurekaService implements Service {
 
   @Override
   public String id() {
-    return instance.getId();
+    return EUREKA_ID_PREFIX + instance.getId();
   }
 
   @Override

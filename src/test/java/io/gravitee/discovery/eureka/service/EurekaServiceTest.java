@@ -145,7 +145,7 @@ public class EurekaServiceTest {
     InstanceInfo instanceInfo = Mockito.mock(InstanceInfo.class);
     when(instanceInfo.getId()).thenReturn("1");
     EurekaService eurekaService = new EurekaService(instanceInfo);
-    assertThat(eurekaService.id()).isEqualTo("1");
+    assertThat(eurekaService.id()).isEqualTo("eureka:1");
   }
 
   @Test
